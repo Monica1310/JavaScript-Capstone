@@ -8,8 +8,9 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   });
+
+  /*
   document.addEventListener('DOMContentLoaded', () => {
-    const userForm = document.getElementById('userForm');
     const message = document.getElementById('message');
     
     document.addEventListener('DOMContentLoaded', function () {
@@ -20,34 +21,42 @@ document.addEventListener("DOMContentLoaded", function () {
             modal.show();
         });
     });
-    
+  });
+  */
 
-    userForm.addEventListener('submit', event => {
+    const userForm = document.getElementById('userForm');
+    console.log(`${userForm}`);
+    userForm.addEventListener('click', event => {
+        const message = document.getElementById('message');
         event.preventDefault();
-        const name = document.getElementById('name').value;
-        const username = document.getElementById('username').value;
+        const name = document.getElementById('FullName').value;
+        const username = document.getElementById('UserName').value;
         const password = document.getElementById('password').value;
-        const confirmPassword = document.getElementById('confirmPassword').value;
+        const confirmPassword = document.getElementById('ConfirmPassword').value;
 
+        console.log(name, username, password, confirmPassword);
+        
         if (password !== confirmPassword) {
             message.textContent = 'Passwords do not match!';
             return;
         }
+                fetch(`http://localhost:8083/api/username_available/${username}`)
+                .then(response => response.text())
+                .then(isAvailable => {
+                    if (isAvailable === false) {
+                        message.textContent = 'Username is already taken!';
+                        return;
+                    }
 
-        fetch(`http://localhost:8083/api/username_available/${username}`)
-            .then(response => response.text())
-            .then(isAvailable => {
-                if (isAvailable === 'NO') {
-                    message.textContent = 'Username is already taken!';
-                    return;
-                }
-
+        
+        
                 const newUser = {
-                    name,
-                    username,
-                    password,
+                    "name":name,
+                    "username":username,
+                    "password":password
                 };
 
+                console.log(JSON.stringify(newUser));
                 fetch('http://localhost:8083/api/users', {
                     method: 'POST',
                     headers: {
@@ -68,5 +77,5 @@ document.addEventListener("DOMContentLoaded", function () {
                     message.textContent = 'Failed to register user!';
                 });
             });
-    });
-});
+    
+        });

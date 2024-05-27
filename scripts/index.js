@@ -8,7 +8,6 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   });
-  
 
 document.addEventListener('DOMContentLoaded', () => {
     const userSelect = document.getElementById('userSelect');

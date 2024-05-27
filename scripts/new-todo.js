@@ -10,10 +10,10 @@ document.addEventListener("DOMContentLoaded", function () {
   });
   
 
-document.addEventListener('DOMContentLoaded', () => {
+    document.addEventListener('DOMContentLoaded', () => {
     const userSelect = document.getElementById('userSelect');
     const categorySelect = document.getElementById('categorySelect');
-    const newTodoForm = document.getElementById('newTodoForm');
+    
 
     // Fetch users
     fetch('http://localhost:8083/api/users')
@@ -26,6 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 userSelect.appendChild(option);
             });
         });
+    });
 
     // Fetch categories
     fetch('http://localhost:8083/api/categories')
@@ -39,20 +40,34 @@ document.addEventListener('DOMContentLoaded', () => {
                 categorySelect.appendChild(option);
             });
         });
+       
+     /*   // Handle form submission
+    todoForm.addEventListener('submit', (e) => {
+        e.preventDefault();
 
+        const newTodo = {
+            userId: userIdSelect.value,
+            category: categorySelect.value,
+            description: document.getElementById('description').value,
+            deadline: document.getElementById('deadline').value,
+            priority: document.getElementById('priority').value
+        };
+*/
     // Form submission
-    newTodoForm.addEventListener('submit', (event) => {
-        event.preventDefault();
+    const newTodoForm = document.getElementById('newTodoForm');
+    console.log(`${newTodoForm}`);
 
+    newTodoForm.addEventListener('click', (event) => {
+        event.preventDefault();
         const newTodo = {
             userid: userSelect.value,
             category: document.getElementById('categorySelect').value,
             description: document.getElementById('description').value,
             deadline: document.getElementById('deadline').value,
             priority: document.getElementById('prioritySelect').value,
-            completed: false
+    
         };
-
+        console.log(`${newTodo}`);
         fetch('http://localhost:8083/api/todos', {
             method: 'POST',
             headers: {
@@ -65,6 +80,5 @@ document.addEventListener('DOMContentLoaded', () => {
             alert('ToDo added successfully!');
             newTodoForm.reset();
         })
-        .catch(error => console.error('Error:', error));
+        .catch(error => console.log('Error:', error));
     });
-});

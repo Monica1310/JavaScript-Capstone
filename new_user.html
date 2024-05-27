@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User ToDos</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="css/styles.css" rel="stylesheet">
+    <link href="css/user-todos.css" rel="stylesheet">
+    
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="index.html">Stay Organized</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link active" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="user-todos.html">View ToDos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="new-todo.html">Add New ToDo</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="new_user.html">Register</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+   <div class="container">
+        <h1 class="text-center my-4">Register</h1>
+        <form>
+            <div class="form-group">
+                <label for="fullname">Full Name* :</label>
+                <input type="text" id="Full Name" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="User Name">User Name* :</label>
+                <input type="Enter the name user wish to use" id="User Name" class="form-control" required>
+                <ul>
+                    <li>Your password must be 6 characters long.</li>
+                    <li>Your Username must have both letters and numbers.</li>
+                    <li>Username should not have any special characters.</li>
+                  </ul>  
+            </div>
+            <div class="form-group">
+                <label for="password">Password* :</label>
+                <input type="password" id="password" class="form-control" required>
+                <ul>
+                    <li>Your password must be atleast 8 characters long.</li>
+                    <li>Your Password must contain atleast one of the below following lists</li>
+                    <ol>
+                        <li>Letters (a-z)</li>
+                        <li>Numbers (0-9)</li>
+                        <li>Capital Letters (A-Z)</li>
+                        <li>Special Characters (!@#$%^&*()_+=)</li>
+                      </ol> 
+                  </ul>  
+            </div>
+            <div class="form-group">
+                <label for="confirm password">Confirm Password* :</label>
+                <input type="confirm password" id="Confirm Password" class="form-control" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Register</button>
+        </form>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="social-buttons">
+            <a href="https://www.facebook.com" class="facebook" aria-label="Facebook" data-tooltip="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.twitter.com" class="twitter" aria-label="Twitter" data-tooltip="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com" class="instagram" aria-label="Instagram" data-tooltip="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com" class="linkedin" aria-label="LinkedIn" data-tooltip="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        </div>
+        <div class="copyright">
+            © 2024 Stay Organized. All rights reserved.
+        </div>
+    </footer>
+
+      <!-- Font Awesome -->
+      <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+      <!-- Bootstrap JS -->
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+      <script src="https://unpkg.com/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.min.js"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <!-- Custom JS -->
+    <script src="scripts/new_user.js"></script>
+</body>
+</html>

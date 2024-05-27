@@ -1,0 +1,163 @@
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f8f9fa; /* Light background for the content area */
+}
+
+/* Custom styles for Navbar */
+.navbar-dark .navbar-nav .nav-link {
+    color: rgba(255, 255, 255, 0.75);
+}
+
+.navbar-dark .navbar-nav .nav-link.active,
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: #ffffff;
+}
+
+/* Override Bootstrap 5 navbar styles */
+nav.navbar {
+    background-color: #002244 !important; /* Dark navy blue background */
+}
+
+nav.navbar .navbar-brand {
+    color: #ffffff; /* White font text color for navbar-brand */
+}
+
+nav.navbar .nav-link {
+    color: #ffffff !important; /* White font text color for nav links */
+}
+
+nav.navbar .nav-link:hover {
+    color: #ffcc00 !important; /* Highlight link with golden yellow on hover */
+}
+
+nav.navbar .nav-link.active {
+    color: #ffffff !important; /* Active link text color */
+}
+/* Import the Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+/* Styling for the logo text */
+.logo a {
+    font-family: 'Pacifico', cursive;
+    font-size: 24px;
+    color: #FFD700; /* Gold color */
+    text-shadow: 2px 2px 4px #000000; /* Black shadow for highlight */
+}
+
+.logo a:hover {
+    color: #FFA500; /* Orange color on hover */
+}w
+
+.popup {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+    width: 250px;
+}
+
+.popup p {
+    margin: 0 0 10px;
+}
+
+.popup ul {
+    padding-left: 20px;
+}
+
+.popup ul li {
+    margin-bottom: 5px;
+}
+
+.form-group {
+    position: relative;
+}
+
+footer {
+    background-color: #343a40;
+    color: white;
+    padding: 20px 0;
+}
+footer {
+    width: 100%;
+    padding: 20px;
+    background-color: #002244; /* Dark navy blue background */
+    color: #ffffff;
+    text-align: center;
+    box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1);
+}
+
+footer .social-media-links a {
+    color: white;
+    font-size: 1.5rem;
+    margin-right: 15px;
+    transition: color 0.3s ease;
+}
+
+footer .social-media-links a:hover {
+    color: #f1c40f;
+}
+footer .social-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+}
+
+footer .social-buttons a {
+    margin: 0 10px;
+    font-size: 1.5em;
+    text-decoration: none;
+    color: #ffffff;
+    transition: color 0.3s, transform 0.3s;
+}
+
+footer .social-buttons a:hover {
+    color: #ffcc00; /* Change to golden yellow on hover */
+    transform: scale(1.2);
+}
+/* Custom styles for Footer */
+.social-media-links .text-white {
+    font-size: 24px;
+}
+
+.social-media-links .text-white:hover {
+    color: #007bff; /* Change color on hover */
+}
+
+footer .social-buttons a.facebook {
+    color: #3b5998;
+}
+
+footer .social-buttons a.twitter {
+    color: #1da1f2;
+}
+
+footer .social-buttons a.instagram {
+    color: #e4405f;
+}
+
+footer .social-buttons a.linkedin {
+    color: #0077b5;
+}
+
+footer .connect-with-us {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+footer .copyright {
+    margin-top: 10px;
+    font-size: 0.875em;
+    color: #ffffff;
+}
+
+
